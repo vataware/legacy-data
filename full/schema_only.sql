@@ -50,20 +50,6 @@ CREATE TABLE IF NOT EXISTS `airports` (
   KEY `FIR` (`FIR`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23900 ;
 
-CREATE TABLE IF NOT EXISTS `airport_aliases` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `code` varchar(4) NOT NULL,
-  `descr` varchar(30) DEFAULT NULL,
-  `lat` decimal(10,6) NOT NULL,
-  `lon` decimal(10,6) NOT NULL,
-  `alias` varchar(10) DEFAULT NULL,
-  `fir` varchar(10) DEFAULT NULL,
-  `unk` bit(1) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `code` (`code`),
-  KEY `alias` (`alias`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5976 ;
-
 CREATE TABLE IF NOT EXISTS `atc` (
   `aid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `cid` mediumint(8) unsigned NOT NULL,
